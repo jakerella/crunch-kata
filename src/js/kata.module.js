@@ -1,6 +1,10 @@
 (function() {
     'use strict';
 
-    angular.module('kata', []);
+    angular.module('kata', [])
+        // TODO: we need to set up a real API for these...
+        .value('endpoints', {
+            order: '/test/fixtures/order.json'
+        });
 
 })();
