@@ -7,6 +7,15 @@ skills in:
 2. Problem solving
 3. AngularJS
 
+## Solution Information
+
+In order to run the tests for this solution please first install the dependencies, then run `npm test`:
+
+```
+npm install
+npm test
+```
+
 ## Problem description
 
 You're working on an application that enables its users to explore survey data. These surveys contain many questions, or *variables*, which may be grouped and organized in a tree-like structure to make them easier to find. Your job is to develop a web component that displays these variables following the specified order structure. (A different team is implementing the interface for arranging the variables into that order--that's not your responsibility.)
