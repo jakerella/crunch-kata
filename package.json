@@ -1,0 +1,30 @@
+{
+  "name": "crunch-kata-master",
+  "version": "1.0.0",
+  "description": "A kata for the Crunch.io team",
+  "main": "src/js/kata.module.js",
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakerella/crunch-kata.git"
+  },
+  "author": "Jordan Kasper",
+  "bugs": {
+    "url": "https://github.com/jakerella/crunch-kata/issues"
+  },
+  "homepage": "https://github.com/jakerella/crunch-kata#readme",
+  "devDependencies": {
+    "angular-mocks": "^1.6.4",
+    "chai": "^3.5.0",
+    "karma": "^1.6.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-mocha": "^1.3.0",
+    "mocha": "^3.3.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.4"
+  }
+}
