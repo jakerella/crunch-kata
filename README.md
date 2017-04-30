@@ -16,6 +16,12 @@ npm install
 npm test
 ```
 
+### Assumptions
+
+1. One of the requirements was to have a service to get a variables "position in the order". It was not clear what this "position" would look like. As such, I have assumed that it is a numeric position within a hierarchical structure represented as an Array of numbers, beginning with the position at the top level, then the second level, and so forth.
+
+2. I have also assumed that have a single factory/service for the various functions is acceptable. The alternative seems to be having a single function in each service, which would not be a sound architectural decision.
+
 ## Problem description
 
 You're working on an application that enables its users to explore survey data. These surveys contain many questions, or *variables*, which may be grouped and organized in a tree-like structure to make them easier to find. Your job is to develop a web component that displays these variables following the specified order structure. (A different team is implementing the interface for arranging the variables into that order--that's not your responsibility.)

@@ -77,6 +77,46 @@
             $httpBackend.flush();
         });
 
+        it('should be able to get the order for a given variable', function(done) {
+
+            let result = SurveyService.getOrderForVariable('0f6ce0');  // [1,0,2]
+
+            expect(result).to.be.an('object');
+            expect(result.then).to.be.an('function');
+            expect(result.catch).to.be.an('function');
+
+            result
+                .then(function(order) {
+                    expect(order).to.be.an('array').and.to.have.property('length').that.equals(3);
+                    expect(order[0]).to.equal(1);
+                    expect(order[1]).to.equal(0);
+                    expect(order[2]).to.equal(2);
+                    done();
+                })
+                .catch(done);
+
+            $httpBackend.flush();
+        });
+
+        it('should be able to get the order for a variable at the root level', function(done) {
+
+            let result = SurveyService.getOrderForVariable('d0fe8b');  // [4]
+
+            expect(result).to.be.an('object');
+            expect(result.then).to.be.an('function');
+            expect(result.catch).to.be.an('function');
+
+            result
+                .then(function(order) {
+                    expect(order).to.be.an('array').and.to.have.property('length').that.equals(1);
+                    expect(order[0]).to.equal(4);
+                    done();
+                })
+                .catch(done);
+
+            $httpBackend.flush();
+        });
+
     });
 
 })();
