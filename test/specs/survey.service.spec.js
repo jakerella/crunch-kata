@@ -117,6 +117,55 @@
             $httpBackend.flush();
         });
 
+        it('should be able to get the variable data for a given position', function(done) {
+
+            let result = SurveyService.getVariableForPosition([1,0,2]);  // '0f6ce0' -> "Usage"
+
+            expect(result).to.be.an('object');
+            expect(result.then).to.be.an('function');
+            expect(result.catch).to.be.an('function');
+
+            result
+                .then(function(data) {
+                    expect(data).to.be.an('object');
+                    expect(data.name).to.equal('Usage');
+                    expect(data.type).to.equal('categorical');
+                    expect(data.description).to.equal('Have you used a Taxi Service in the last 2 weeks?');
+
+                    done();
+                })
+                .catch(done);
+
+            $httpBackend.flush();
+        });
+
+        it('should be able to get the variable data for a given position at the root', function(done) {
+
+            SurveyService.getVariableForPosition([5])  // '0894c5' -> "Weight"
+                .then(function(data) {
+                    expect(data).to.be.an('object');
+                    expect(data.name).to.equal('Weight');
+                    expect(data.type).to.equal('numeric');
+                    expect(data.description).to.equal('Are you the parent or guardian of any children under the age of 18?');
+
+                    done();
+                })
+                .catch(done);
+
+            $httpBackend.flush();
+        });
+
+        it('should resolve with null for a non-existant position', function(done) {
+            SurveyService.getVariableForPosition([2,6,2])
+                .then(function(data) {
+                    expect(data).to.be.null;
+                    done();
+                })
+                .catch(done);
+
+            $httpBackend.flush();
+        });
+
     });
 
 })();

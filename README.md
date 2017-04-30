@@ -20,7 +20,9 @@ npm test
 
 1. One of the requirements was to have a service to get a variables "position in the order". It was not clear what this "position" would look like. As such, I have assumed that it is a numeric position within a hierarchical structure represented as an Array of numbers, beginning with the position at the top level, then the second level, and so forth.
 
-2. I have also assumed that have a single factory/service for the various functions is acceptable. The alternative seems to be having a single function in each service, which would not be a sound architectural decision.
+2. The term "variable name" was used in an inconsistent manner. I have assumed it to mean the variable identifier (non-English) for the function to retrieve a variable's position in the order given its "name" since the actual name of the data within a variable does not appear in the order.json file.
+
+3. I have also assumed that have a single factory/service for the various functions is acceptable. The alternative seems to be having a single function in each service, which would not be a sound architectural decision.
 
 ## Problem description
 
