@@ -22,7 +22,9 @@ npm test
 
 2. The term "variable name" was used in an inconsistent manner. I have assumed it to mean the variable identifier (non-English) for the function to retrieve a variable's position in the order given its "name" since the actual name of the data within a variable does not appear in the order.json file.
 
-3. I have also assumed that have a single factory/service for the various functions is acceptable. The alternative seems to be having a single function in each service, which would not be a sound architectural decision.
+3. I have created a single factory/service for the various functions is acceptable. The alternative seems to be having a single function in each service, which would not be a sound architectural decision.
+
+4. I have assumed that the directive will be responsible for getting the survey data since it was not specified that a controller should be used. This might lead to the data and view being too tightly coupled.
 
 ## Problem description
 
