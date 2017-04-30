@@ -9,7 +9,7 @@ skills in:
 
 ## Solution Information
 
-In order to run the tests for this solution please first install the dependencies, then run `npm test`:
+This solution utlizes npm for dependencies, of which there are: angular, angular-mocks, mocha, chai, karma (and all the things karma needs to connect those things). This has only been tested in Chrome on MacOS, but should be sound otherwise. In order to run the tests for this solution please first install the dependencies, then run `npm test`:
 
 ```
 npm install
@@ -25,6 +25,10 @@ npm test
 3. I have created a single factory/service for the various functions is acceptable. The alternative seems to be having a single function in each service, which would not be a sound architectural decision.
 
 4. I have assumed that the directive will be responsible for getting the survey data since it was not specified that a controller should be used. This might lead to the data and view being too tightly coupled.
+
+5. ES6/2015 is ok... so this code will only run in modern browsers until transpiling is added.
+
+6. Styles and user interaction (collapsing lists) are not required considering it is not listed in the deliverables.
 
 ## Problem description
 
