@@ -53,6 +53,11 @@
             expect(elemMain.tagName).to.equal('MAIN');
             expect($(elemMain).find('h2').length).to.equal(8);
             expect($(elemMain).find('ul').length).to.equal(9);
+            expect(elem[0].querySelectorAll('main > ul > li:first-child > ul > li > ul').length).to.equal(2);
+            expect(elem[0].querySelectorAll('main > ul > li:first-child > ul > li > ul')[0].querySelectorAll('li').length).to.equal(2);
+            expect(elem[0].querySelectorAll('main > ul > li:first-child > ul > li > ul')[1].querySelectorAll('li').length).to.equal(2);
+            expect(elem[0].querySelectorAll('main > ul > li:nth-child(2) > ul > li > ul')[0].querySelectorAll('li').length).to.equal(4);
+            expect(elem[0].querySelectorAll('main > ul > li:nth-child(2) > ul > li > ul')[1].querySelectorAll('li').length).to.equal(4);
             expect($(elemMain).find('h3').length).to.equal(22);
             expect($(elemMain).find('h2')[3].innerText).to.equal('Purchase Consideration and Behavior');
             expect($(elemMain).find('h3')[5].innerText).to.equal('Likely Purchase');
